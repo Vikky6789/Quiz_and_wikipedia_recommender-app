@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <div>
+            <img class="logo" src="./pictures/Quiz_logo.png" alt="Quiz Logo">
+        </div>
+    </nav>
+     
+    <div id="question-content">
+        <h1>Choose a Category and Start Quiz</h1>
+        <form id="quiz-form">
+            <select id="category-select" name="category">
+                <option value="">Select a category...</option>
+                <option value="9">General Knowledge</option>
+                <option value="10">Entertainment: Books</option>
+                <option value="11">Entertainment: Film</option>
+                <option value="12">Entertainment: Music</option>
+                <option value="13">Entertainment: Musicals & Theatres</option>
+                <option value="14">Entertainment: Television</option>
+                <option value="15">Entertainment: Video Games</option>
+                <option value="16">Entertainment: Board Games</option>
+                <option value="17">Science & Nature</option>
+                <option value="18">Science: Computers</option>
+                <option value="19">Science: Mathematics</option>
+                <option value="20">Mythology</option>
+                <option value="21">Sports</option>
+                <option value="22">Geography</option>
+                <option value="23">History</option>
+                <option value="24">Politics</option>
+                <option value="25">Art</option>
+                <option value="26">Celebrities</option>
+                <option value="27">Animals</option>
+                <option value="28">Vehicles</option>
+                <option value="29">Entertainment: Comics</option>
+                <option value="30">Science: Gadgets</option>
+                <option value="31">Entertainment: Japanese Anime & Manga</option>
+                <option value="32">Entertainment: Cartoon & Animations</option>
+            </select>
+            <button type="submit">Start Quiz</button>
+        </form>
+
+         
+        <!-- Quiz Container -->
+        <div id="quiz-container"></div>
+        
+        <!-- Score and Finish Button -->
+        <div id="score-container" style="display: none;">
+            Score: <span id="score-value">0</span>
+        </div>
+        <button id="finish-btn" style="display: none;">Finish Quiz</button>
+    </div>
+
+       
+        <!-- Flashcards Section -->
+        <div id="knowledge-content">
+            <div class="flashcard">
+                <img src="./pictures/sports.png" alt="Sports">
+                <h2>Sports</h2>
+                <p>The Olympic Games were originally held to honor the Greek god Zeus and were staged every four years.</p>
+                <a href="https://en.wikipedia.org/wiki/Sports" target="_blank">Learn more</a>
+            </div>
+
+            <div class="flashcard">
+                <img src="./pictures/literature.png" alt="Literature">
+                <h2>Literature</h2>
+                <p>The first novel ever written is generally considered to be "The Tale of Genji," penned by Murasaki Shikibu in Japan around 1008 AD.</p>
+                <a href="https://en.wikipedia.org/wiki/Literature" target="_blank">Learn more</a>
+            </div>
+
+            <div class="flashcard">
+                <img src="./pictures/music.png" alt="Music">
+                <h2>Music</h2>
+                <p>The longest concert lasted over 639 hours, performed in Germany from March to April 2019.</p>
+                <a href="https://en.wikipedia.org/wiki/Music" target="_blank">Learn more</a>
+            </div>
+
+            <div class="flashcard">
+                <img src="./pictures/dance.png" alt="Dance">
+                <h2>Dance</h2>
+                <p>The world's largest dance class included 16,732 participants and was achieved in India in 2019.</p>
+                <a href="https://en.wikipedia.org/wiki/Dance" target="_blank">Learn more</a>
+            </div>
+
+            <div class="flashcard">
+                <img src="./pictures/drama.png" alt="Drama">
+                <h2>Drama</h2>
+                <p>Shakespeare is credited with writing 37 plays, including tragedies like "Hamlet" and comedies like "A Midsummer Night's Dream."</p>
+                <a href="https://en.wikipedia.org/wiki/Drama" target="_blank">Learn more</a>
+            </div>
+
+            <div class="flashcard">
+                <img src="./pictures/spiritual.png" alt="Spiritual">
+                <h2>Spiritual</h2>
+                <p>Yoga, originating in ancient India, combines physical postures with spiritual disciplines for holistic health.</p>
+                <a href="https://en.wikipedia.org/wiki/Spiritual" target="_blank">Learn more</a>
+            </div>
+
+            <div class="flashcard">
+                <img src="./pictures/education.png" alt="Education">
+                <h2>Education</h2>
+                <p>The oldest existing, continually operating educational institution is the University of al-Qarawiyyin in Fez, Morocco, founded in AD 859.</p>
+                <a href="https://en.wikipedia.org/wiki/Education" target="_blank">Learn more</a>
+            </div>
+
+            <div class="flashcard">
+                <img src="./pictures/technology.png" alt="Technology">
+                <h2>Technology</h2>
+                <p>The first computer virus, "Creeper," was created in the early 1970s as an experimental program on ARPANET.</p>
+                <a href="https://en.wikipedia.org/wiki/Technology" target="_blank">Learn more</a>
+            </div>
+        </div>
+        
+      
+    <footer>
+        <p>@Designed by Sanket</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

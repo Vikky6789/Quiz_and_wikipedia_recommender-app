@@ -1,0 +1,388 @@
+/* Reset default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0e6d2;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar styles */
+nav {
+    background-color: #bfae9d;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    z-index: 1000; /* Ensure navbar stays on top */
+}
+
+.logo {
+    width: 40px; /* Adjust width as per your logo size */
+    height: 40px;
+}
+
+nav button {
+    padding: 5px 10px;
+    margin-right: 20px; /* Reduce margin */
+    font-size: 1em;
+    background-color: #8c7e6d;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+nav button:hover {
+    background-color: #736456;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #fdf5e6; /* Change color on hover */
+}
+
+/* Main content container */
+#main-content {
+    flex: 1 0 auto; /* Allows the main content to grow and push the footer down */
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 80px; /* Ensure content starts below navbar */
+}
+
+/* Flashcard styles */
+.flashcard {
+    background-color: #fdf5e6;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.flashcard:hover {
+    transform: translateY(-5px); /* Lift card on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.flashcard img {
+    width: 100%;
+    height: 150px; /* Fixed height for uniform image size */
+    object-fit: cover; /* Ensures the image covers the entire container */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.flashcard h2 {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #333; /* Darken text color */
+}
+
+.flashcard p {
+    padding: 0 10px;
+    color: #666; /* Lighten text color */
+}
+
+.flashcard a {
+    display: block;
+    margin: 10px;
+    text-decoration: none;
+    color: #bfae9d; /* Accent color */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.flashcard a:hover {
+    color: #8c7e6d; /* Darken accent color on hover */
+}
+
+/* Add or update CSS styles as needed */
+/* Quiz container */
+#quiz-container {
+    position: relative;
+    margin-top: 20px;
+}
+
+.question {
+    background-color: #fdf5e6;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.question:first-child {
+    margin-top: 0;
+}
+
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.option {
+    padding: 10px 20px;
+    background-color: #bfae9d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.option:hover {
+    background-color: #8c7e6d;
+}
+
+
+#score-container {
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#finish-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#finish-btn:hover {
+    background-color: #0056b3;
+}
+
+.hidden {
+    display: none;
+}
+
+
+#knowledge-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+
+
+/* Styles for Browse Wiki Info (wiki-search) */
+#wiki-search {
+    display: none; /* Initially hide the search bar */
+    position: fixed;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 1000;
+    max-height: calc(100% - 120px); /* Adjust max-height to fit within viewport */
+    overflow-y: auto; /* Enable vertical scrolling for overflow content */
+}
+
+#wiki-search.show {
+    display: block; /* Show search bar when .show class is added */
+}
+
+#wiki-search form {
+    display: flex;
+    align-items: center;
+}
+
+#wiki-search input[type="text"] {
+    flex: 1;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+
+#wiki-search button {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#wiki-search button:hover {
+    background-color: #0056b3;
+}
+
+#wiki-search #search-results {
+    margin-top: 10px;
+    padding: 10px;
+}
+
+#wiki-search #search-results .search-result {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#wiki-search #search-results .search-result h3 {
+    margin-top: 0;
+    font-size: 16px;
+}
+
+#wiki-search #search-results .search-result p {
+    margin-bottom: 5px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+#wiki-search #search-results .search-result a {
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+#wiki-search #search-results .search-result a:hover {
+    text-decoration: underline;
+}
+
+#wiki-search .close-search-results {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#wiki-search .close-search-results:hover {
+    background-color: #c82333;
+}
+
+/* Add new CSS for blurred flashcards */
+.flashcard.blurred {
+    filter: blur(5px); /* Apply blur effect */
+    transition: filter 0.3s ease; /* Smooth transition for blur effect */
+}
+
+
+footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Media queries for responsiveness */
+@media (min-width: 1200px) {
+    #quiz-container {
+        grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+    }
+    #main-content{
+        grid-template-columns: repeat(4,1fr);
+    }
+
+    #knowledge-content{
+        padding: 20px;
+    }
+    #knowledge-content .flashcard{
+        width: calc(25% - 20px);
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+    #quiz-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    }
+    #main-content{
+        grid-template-columns: repeat(3,1fr);
+    }
+    #knowledge-content{
+        padding: 20px;
+    }
+    #knowledge-content .flashcard  {
+        width: calc(33.33% - 20px);
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+    #quiz-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    }
+    #main-content{
+        grid-template-columns: repeat(2,1fr);
+    }
+    #knowledge-content{
+        padding: 20px;
+    }
+    #knowledge-content .flashcard{
+        width: calc(50% - 20px);
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    #quiz-container {
+        grid-template-columns: 1fr; /* 1 card per row */
+    }
+    #main-content{
+        grid-template-columns: 1fr;
+    }
+    #knowledge-content{
+        padding: 20px;
+    }
+    #knowledge-content .flashcard {
+        width: calc(100% - 20px);
+        margin-bottom: 20px;
+    }
+}
